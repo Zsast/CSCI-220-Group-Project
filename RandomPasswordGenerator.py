@@ -33,10 +33,10 @@ def password_generator():
         if char.isalnum():
             alphanumerical_list.append(char)
     
-    for i in range(password_length_input):
+    for i in range(password_length_input - 1):
         password_chars.append(random.choice(alphanumerical_list))
     if specify_special_chars == "Yes":
-        password_chars.remove[0:-1]
+        #password_chars.remove[0:-1]
         password_chars.append(random.choice(special_characters_list))
     
     print(ascii_list)
