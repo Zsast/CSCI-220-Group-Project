@@ -34,8 +34,7 @@ def password_generator():
 
     # Validate special character preference
     while True:
-        specify_special_chars = input(
-            "Would you like to use special characters? Respond with either \"Yes\" or \"No\": ").strip().lower()
+        specify_special_chars = input("Would you like to use special characters? Respond with either \"Yes\" or \"No\": ").strip().lower()
 
         if specify_special_chars in ("yes", "no"):
             break
@@ -46,20 +45,20 @@ def password_generator():
     sleep(1)
 
     # Character sets
-    ascii_list = [chr(i) for i in range(32, 127)]             # All printable ASCII characters
-    alphanumerical_list = [c for c in ascii_list if c.isalnum()]  # Only letters and digits
-    special_characters_list = ["!", "?", "$", "@", "#", "_"]  # Defined special characters
+    ascii_list = [chr(i) for i in range(32, 127)] # All printable ASCII characters
+    alphanumerical_list = [char for char in ascii_list if char.isalnum()] # Only letters and digits
+    special_characters_list = ["!", "?", "$", "@", "#", "_"] # Defined special characters
 
     # Build initial password list
     password_chars = [random.choice(alphanumerical_list) for _ in range(password_length_input)]
 
     # Insert special character randomly if requested
     if specify_special_chars == "yes":
-        insert_index = random.randint(0, len(password_chars) - 1)
-        password_chars[insert_index] = random.choice(special_characters_list)
+        special_chars_insert_index = random.randint(0, len(password_chars) - 1)
+        password_chars[special_chars_insert_index] = random.choice(special_characters_list)
 
     # Combine characters into a single string
-    password_result = ''.join(password_chars)
+    password_result = ("").join(password_chars)
 
     print(f"Your unique password: {password_result}\n")
 
@@ -78,7 +77,7 @@ if __name__ == "__main__":
             print()
             if do_again in ("yes", "y", "sure"):
                 sleep(1)
-                break  # Exit inner loop and run password_generator() again
+                break # Exit inner loop and run password_generator() again
             elif do_again in ("no", "n", "nope"):
                 sleep(1)
                 print("Thank you for using the Random Password Generator! Goodbye.")
