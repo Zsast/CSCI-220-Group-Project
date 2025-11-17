@@ -1,9 +1,9 @@
 # ===============================================================
 # CSCI-220 Group Project: Random Password Generator
-# Authors: Daniel Roberts, Griffin (lastname)
+# Authors: Daniel Roberts, Griffin Brown
 # Course: CSCI-220-03-04
 # Instructor: Dr. Mia Wang
-# Due Date: ??/??/2025
+# Due Date: November 25th, 2025
 #
 # Certification: We certify that this project is entirely our own
 # collaborative work, with contributions shared through GitHub.
@@ -18,9 +18,8 @@
 import random
 from time import sleep
 
-
+# Generate a randomized password based on user-defined parameters.
 def password_generator():
-    """Generate a randomized password based on user-defined parameters."""
 
     # Prompt user for desired password length
     while True:
@@ -66,7 +65,7 @@ def password_generator():
     print(f"Your unique password: {password}\n")
 
 
-def main():
+def project_flow():
     print("\nWelcome to the Random Password Generator!\n")
     sleep(1)
 
@@ -93,4 +92,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    project_flow()
