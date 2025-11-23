@@ -159,5 +159,5 @@ def console():
 
 
 if __name__ == "__main__":
-    console() # Uncomment this line to use console mode
+    # console() # Uncomment this line to use console mode
     graphics_ui()  # Launch GUI by default
